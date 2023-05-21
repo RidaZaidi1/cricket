@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:themedark/screens/Ranking/mainrank.dart';
 
 import '../modecontroller.dart';
-import 'players.dart';
+import '../screens/Players/players.dart';
 class Morepage extends StatefulWidget {
   const Morepage({ Key? key }) : super(key: key);
 
@@ -161,7 +162,7 @@ body: SingleChildScrollView(
             onTap: (){
                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Playerslist()));
             },
-            child: Text('Player',style:TextStyle(color: controller.mode == 'light'? Color(0xff020e28) :Colors.white,fontSize:16,fontWeight: FontWeight.w500))),
+            child: Text('Player',style:TextStyle(color: controller.mode == 'light'? Colors.black:Colors.white,fontSize:16,fontWeight: FontWeight.w500))),
   
     
   
@@ -193,7 +194,7 @@ body: SingleChildScrollView(
   
     
   
-          child:   Icon(Icons.arrow_forward_ios,color:  controller.mode == 'light'? Color(0xff020e28) :Color(0xff9aaed5),size: 20,),
+          child:   Icon(Icons.arrow_forward_ios,color:  controller.mode == 'light'? Colors.black :Color(0xff9aaed5),size: 20,),
   
     
   
@@ -277,7 +278,11 @@ body: SingleChildScrollView(
   
     
   
-          child:   Text('Rankings',style:TextStyle(color: controller.mode == 'light'? Color(0xff020e28) :Colors.white,fontSize:16,fontWeight: FontWeight.w500)),
+          child:   GestureDetector(
+            onTap: (){
+                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Mainrank()));
+            },
+            child: Text('Rankings',style:TextStyle(color: controller.mode == 'light'? Colors.black :Colors.white,fontSize:16,fontWeight: FontWeight.w500))),
   
     
   
@@ -389,7 +394,7 @@ body: SingleChildScrollView(
   
       
   
-        child:   Text('Notification',style:TextStyle(color: controller.mode == 'light'? Color(0xff020e28) :Colors.white,fontSize:16,fontWeight: FontWeight.w500)),
+        child:   Text('Notification',style:TextStyle(color: controller.mode == 'light'? Colors.black :Colors.white,fontSize:16,fontWeight: FontWeight.w500)),
   
       
   
@@ -461,7 +466,7 @@ body: SingleChildScrollView(
   
       
   
-        child:   Text('Dark mode',style:TextStyle(color: controller.mode == 'light'? Color(0xff020e28) :Colors.white,fontSize:16,fontWeight: FontWeight.w500)),
+        child:   Text('Dark mode',style:TextStyle(color: controller.mode == 'light'? Colors.black :Colors.white,fontSize:16,fontWeight: FontWeight.w500)),
   
       
   
@@ -547,7 +552,7 @@ body: SingleChildScrollView(
   
       
   
-        child:   Text('Feedback',style:TextStyle(color: controller.mode == 'light'? Color(0xff020e28) :Colors.white,fontSize:16,fontWeight: FontWeight.w500)),
+        child:   Text('Feedback',style:TextStyle(color: controller.mode == 'light'? Colors.black :Colors.white,fontSize:16,fontWeight: FontWeight.w500)),
   
       
   
@@ -601,7 +606,7 @@ body: SingleChildScrollView(
   
       
   
-        child:   Text('Rate us',style:TextStyle(color: controller.mode == 'light'? Color(0xff020e28) :Colors.white,fontSize:16,fontWeight: FontWeight.w500)),
+        child:   Text('Rate us',style:TextStyle(color: controller.mode == 'light'? Colors.black :Colors.white,fontSize:16,fontWeight: FontWeight.w500)),
   
       
   
@@ -653,7 +658,7 @@ body: SingleChildScrollView(
   
       
   
-        child:   Text('Share',style:TextStyle(color: controller.mode == 'light'? Color(0xff020e28) :Colors.white,fontSize:16,fontWeight: FontWeight.w500)),
+        child:   Text('Share',style:TextStyle(color: controller.mode == 'light'? Colors.black :Colors.white,fontSize:16,fontWeight: FontWeight.w500)),
   
       
   

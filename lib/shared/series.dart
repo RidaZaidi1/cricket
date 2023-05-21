@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:themedark/screens/homee3.dart';
 
 import '../modecontroller.dart';
 
@@ -21,7 +22,11 @@ class _SeriesState extends State<Series> {
        
        Padding(
          padding: const EdgeInsets.only(right:60.0),
-         child: Text("Ireland tour of England ODi seris 2023",style: TextStyle(color:  controller.mode == 'light'? Color(0xff020e28) :Colors.white,fontSize: 15,fontWeight: FontWeight.w500),),
+         child: GestureDetector(
+            onTap: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Homee4()));
+                    },
+          child: Text("Ireland tour of England ODi seris 2023",style: TextStyle(color:  controller.mode == 'light'? Color(0xff020e28) :Colors.white,fontSize: 15,fontWeight: FontWeight.w500),)),
        ),
        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
          children: [

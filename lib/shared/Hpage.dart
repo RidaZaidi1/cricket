@@ -1,6 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:themedark/screens/homee3.dart';
+import 'package:themedark/screens/homee4.dart';
+import 'package:themedark/screens/morenews.dart';
+import 'package:themedark/screens/moreseries.dart';
+import 'package:themedark/shared/Npage.dart';
 
 import '../modecontroller.dart';
 
@@ -115,79 +120,84 @@ Transform.translate(offset: Offset(-20, -40.0),
 
    Transform.translate(offset: Offset(-20, -89.0),
 
-    child:   Container(
-
-    height:size.height*0.25 ,
-
-    width: size.width*0.97,
-
-    decoration: BoxDecoration(color: controller.mode == 'light'
-                                      ? Color(0xff1A3A90): Color(0xff5e6474),borderRadius: BorderRadius.circular(20)),
-
-   child: Center(child: Column(
-
-       children: [
-
-        SizedBox(height: 40,),
-
-         Row(
-
-         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
-          
-
-          children: [
-
-          Column(
-
+    child:   GestureDetector(
+      onTap: (){
+           Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Homee5()));
+      },
+      child: Container(
+    
+      height:size.height*0.25 ,
+    
+      width: size.width*0.97,
+    
+      decoration: BoxDecoration(color: controller.mode == 'light'
+                                        ? Color(0xff1A3A90): Color(0xff5e6474),borderRadius: BorderRadius.circular(20)),
+    
+       child: Center(child: Column(
+    
+         children: [
+    
+          SizedBox(height: 40,),
+    
+           Row(
+    
+           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    
+            
+    
             children: [
-
-              Image.asset("assets/ireland.png",height: 30,width: 50,),
-
-              Text("Ireland",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontSize: 15),)
-
-            ],
-
-          ),
-
-           Column(
-
-            children: [
-
-  Image.asset("assets/vs.png",height: 60,width: 90,),
-
-
-
-
-
-            ],
-
-          ),
-
-           Column(
-
-            children: [
-
-               Image.asset("assets/ban.png",height: 30,width: 50,),
-
-              Text("Bangladesh",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontSize: 15),),
-
-              Text("*94/2(14.4 ov)",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontSize: 15),)
-
-            ],
-
-          )
-
-         ],),
-
-         SizedBox(height: 20,),
-
-          Text("County Ground , Chemsforlt",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontSize: 15),),
-
-       ],
-
-   ),),
-
+    
+            Column(
+    
+              children: [
+    
+                Image.asset("assets/ireland.png",height: 30,width: 50,),
+    
+                Text("Ireland",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontSize: 15),)
+    
+              ],
+    
+            ),
+    
+             Column(
+    
+              children: [
+    
+      Image.asset("assets/vs.png",height: 60,width: 90,),
+    
+    
+    
+    
+    
+              ],
+    
+            ),
+    
+             Column(
+    
+              children: [
+    
+                 Image.asset("assets/ban.png",height: 30,width: 50,),
+    
+                Text("Bangladesh",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontSize: 15),),
+    
+                Text("*94/2(14.4 ov)",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontSize: 15),)
+    
+              ],
+    
+            )
+    
+           ],),
+    
+           SizedBox(height: 20,),
+    
+            Text("County Ground , Chemsforlt",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontSize: 15),),
+    
+         ],
+    
+       ),),
+    
+      ),
     ),
 
    ),
@@ -683,7 +693,12 @@ Transform.translate(offset: Offset(-20, -40.0),
        
               Padding(
                 padding: const EdgeInsets.all(3.0),
-                child: Text('More',style:TextStyle(color:controller.mode == 'light'?Color(0xff1A3A90)  :Color(0xff9aaed5),fontSize: 16,fontWeight:FontWeight.w700 ) ,),
+                child: GestureDetector(
+                    onTap:(){
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Homee3()));
+
+                  },
+                  child: Text('More',style:TextStyle(color:controller.mode == 'light'?Color(0xff1A3A90)  :Color(0xff9aaed5),fontSize: 16,fontWeight:FontWeight.w700 ) ,)),
               )
        
   
@@ -697,7 +712,7 @@ Transform.translate(offset: Offset(-20, -40.0),
        offset: Offset(0, -200),
        child:   Container(
        
-        height: size.height*0.14,
+        height: size.height*0.12,
        
         width: size.width*0.99,
        
@@ -722,7 +737,7 @@ Transform.translate(offset: Offset(-20, -40.0),
               child: GestureDetector(
                 onTap: () {
                   
-                    //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Homee3()));
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Homee4()));
                 },
                 child: Container(
                    
@@ -754,11 +769,11 @@ Transform.translate(offset: Offset(-20, -40.0),
                       SizedBox(height: 20,),
                       Padding(
                         padding: const EdgeInsets.only(left:10.0),
-                        child: Text("Irelanad tour of England Only test,2023",style:TextStyle(color:controller.mode == 'light'? Color(0xff020e28) :Color(0xff9aaed5),fontSize: 15,fontWeight:FontWeight.w900 ) ,),
+                        child: Text("Irelanad tour of England Only test,2023",style:TextStyle(color:controller.mode == 'light'? Color(0xff020e28) :Color(0xff9aaed5),fontSize: 14,fontWeight:FontWeight.w900 ) ,),
                       ),
                           Padding(
                             padding: const EdgeInsets.only(left:10.0),
-                            child: Text("01 June - 04 June 2023",style:TextStyle(color: controller.mode == 'light'? Color(0xff1A3A90) :Color(0xff8CB3EA),fontSize: 15,fontWeight:FontWeight.w900 ) ,),
+                            child: Text("01 June - 04 June 2023",style:TextStyle(color: controller.mode == 'light'? Color(0xff1A3A90) :Color(0xff8CB3EA),fontSize: 13,fontWeight:FontWeight.w900 ) ,),
                           ),
                     ],
                   ) ,
@@ -779,7 +794,7 @@ Transform.translate(offset: Offset(-20, -40.0),
               child: GestureDetector(
                 onTap: () {
                   
-                    //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Homee3()));
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Homee4()));
                 },
                 child: Container(
                    
@@ -811,11 +826,11 @@ Transform.translate(offset: Offset(-20, -40.0),
                       SizedBox(height: 20,),
                       Padding(
                         padding: const EdgeInsets.only(left:10.0),
-                        child: Text("Irelanad tour of England Only test,2023",style:TextStyle(color:controller.mode == 'light'? Color(0xff020e28) :Color(0xff9aaed5),fontSize: 15,fontWeight:FontWeight.w900 ) ,),
+                        child: Text("Irelanad tour of England Only test,2023",style:TextStyle(color:controller.mode == 'light'? Color(0xff020e28) :Color(0xff9aaed5),fontSize: 14,fontWeight:FontWeight.w900 ) ,),
                       ),
                           Padding(
                             padding: const EdgeInsets.only(left:10.0),
-                            child: Text("01 June - 04 June 2023",style:TextStyle(color: controller.mode == 'light'? Color(0xff1A3A90) :Color(0xff8CB3EA),fontSize: 15,fontWeight:FontWeight.w900 ) ,),
+                            child: Text("01 June - 04 June 2023",style:TextStyle(color: controller.mode == 'light'? Color(0xff1A3A90) :Color(0xff8CB3EA),fontSize: 13,fontWeight:FontWeight.w900 ) ,),
                           ),
                     ],
                   ) ,
@@ -835,7 +850,7 @@ Transform.translate(offset: Offset(-20, -40.0),
               child: GestureDetector(
                 onTap: () {
                   
-                    //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Homee3()));
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Homee4()));
                 },
                 child: Container(
                    
@@ -867,11 +882,11 @@ Transform.translate(offset: Offset(-20, -40.0),
                       SizedBox(height: 20,),
                       Padding(
                         padding: const EdgeInsets.only(left:10.0),
-                        child: Text("Irelanad tour of England Only test,2023",style:TextStyle(color:controller.mode == 'light'? Color(0xff020e28) :Color(0xff9aaed5),fontSize: 15,fontWeight:FontWeight.w900 ) ,),
+                        child: Text("Irelanad tour of England Only test,2023",style:TextStyle(color:controller.mode == 'light'? Color(0xff020e28) :Color(0xff9aaed5),fontSize: 14,fontWeight:FontWeight.w900 ) ,),
                       ),
                           Padding(
                             padding: const EdgeInsets.only(left:10.0),
-                            child: Text("01 June - 04 June 2023",style:TextStyle(color: controller.mode == 'light'? Color(0xff1A3A90) :Color(0xff8CB3EA),fontSize: 15,fontWeight:FontWeight.w900 ) ,),
+                            child: Text("01 June - 04 June 2023",style:TextStyle(color: controller.mode == 'light'? Color(0xff1A3A90) :Color(0xff8CB3EA),fontSize: 13,fontWeight:FontWeight.w900 ) ,),
                           ),
                     ],
                   ) ,
@@ -907,7 +922,12 @@ Transform.translate(offset: Offset(-20, -40.0),
        
               Padding(
                 padding: const EdgeInsets.all(3.0),
-                child: Text('More',style:TextStyle(color:controller.mode == 'light'?Color(0xff1A3A90)  :Color(0xff9aaed5),fontSize: 16,fontWeight:FontWeight.w700 ) ,),
+                child: GestureDetector(
+                  onTap:(){
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Homee2()));
+
+                  },
+                  child: Text('More',style:TextStyle(color:controller.mode == 'light'?Color(0xff1A3A90)  :Color(0xff9aaed5),fontSize: 16,fontWeight:FontWeight.w700 ) ,)),
               )
        
   

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../modecontroller.dart';
+import '../../modecontroller.dart';
+import 'mainplayer.dart';
 class Playerslist extends StatefulWidget {
 
 
@@ -124,44 +125,50 @@ body: SingleChildScrollView(
   
               SizedBox(height: 10,),
   
-              Container(
-  
-                height: 50,
-  
-           
-  
-                child: Row(
-  
-                  
-  
-                  children: [
-  
-              
-  
-                  Image.asset("assets/person.png",height: 55,),
-  
-                  Column(children: [
-  
-                    Padding(
-  
-                      padding: const EdgeInsets.only(left:30),
-  
-                      child: Text("Brian vitori",style: TextStyle(color: controller.mode == 'light'? Color(0xff020e28) :Colors.white,fontSize: 16,fontWeight: FontWeight.w400),),
-  
-                    ),
-  
-                                  Padding(
-  
-                                    padding: const EdgeInsets.only(left:20.0,top:10),
-  
-                                    child: Text("Zimbabwe",style: TextStyle(color: controller.mode == 'light'? Color(0xff1A3A90) :Color(0xff9aaed5),fontSize: 15,fontWeight: FontWeight.w400),),
-  
-                                  ),
-  
+              GestureDetector(
+                 onTap: (){
+                              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Mainplayer()));
+
+    },
+                child: Container(
+                
+                  height: 50,
+                
+                         
+                
+                  child: Row(
+                
+                    
+                
+                    children: [
+                
+                
+                
+                    Image.asset("assets/person.png",height: 55,),
+                
+                    Column(children: [
+                
+                      Padding(
+                
+                        padding: const EdgeInsets.only(left:30),
+                
+                        child: Text("Brian vitori",style: TextStyle(color: controller.mode == 'light'? Color(0xff020e28) :Colors.white,fontSize: 16,fontWeight: FontWeight.w400),),
+                
+                      ),
+                
+                                    Padding(
+                
+                                      padding: const EdgeInsets.only(left:20.0,top:10),
+                
+                                      child: Text("Zimbabwe",style: TextStyle(color: controller.mode == 'light'? Color(0xff1A3A90) :Color(0xff9aaed5),fontSize: 15,fontWeight: FontWeight.w400),),
+                
+                                    ),
+                
+                    ],)
+                
                   ],)
-  
-                ],)
-  
+                
+                ),
               ),
   
               SizedBox(height: 5,),
